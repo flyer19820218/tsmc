@@ -1,0 +1,38 @@
+name: Daily Stock Update
+
+on:
+  schedule:
+    # 台灣時間下午 3:00 執行 (UTC時間 07:00) 禮拜一到禮拜五
+    - cron: '0 7 * * 1-5'
+  workflow_dispatch: # 允許你隨時手動點擊執行
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # 允許機器人寫入 index.html
+
+    steps:
+      - name: 📥 下載專案程式碼
+        uses: actions/checkout@v3
+
+      - name: 🐍 設定 Python 環境
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: 📦 安裝所需套件
+        run: |
+          pip install yfinance pytz
+
+      - name: 🚀 執行抓價與網頁生成腳本
+        run: python update_dashboard.py
+
+      - name: 💾 儲存並推送到 GitHub Pages
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action Bot"
+          git add index.html
+          # 如果沒有變更就不 commit
+          git commit -m "自動更新: 最新收盤價" || exit 0
+          git push

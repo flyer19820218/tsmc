@@ -8,7 +8,7 @@ supply_chain = {
         {"name": "新應材", "ticker": "4749.TWO", "desc": "EUV/DUV 高階光阻液、底層吸收材料。台廠突破外商壟斷的黑馬。"},
         {"name": "三福化", "ticker": "4755.TW", "desc": "TMAH 顯影液回收與製造龍頭，緊跟半導體在地化政策。"},
         {"name": "達興材料", "ticker": "5234.TW", "desc": "半導體高階光學材料、光阻剝離液。"},
-        {"name": "家登", "ticker": "3680.TW", "desc": "EUV 極紫外光光罩盒 (POD) 全球市佔霸主。"}
+        {"name": "家登", "ticker": "3680.TWO", "desc": "EUV 極紫外光光罩盒 (POD) 全球市佔霸主。"}
     ],
     "💧 2. 蝕刻與清洗 (Etch & Clean)": [
         {"name": "崇越", "ticker": "5434.TW", "desc": "代理日本高純度 HF (氫氟酸) 與各類特化材料，濕式製程關鍵。"},

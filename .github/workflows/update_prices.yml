@@ -24,6 +24,8 @@ jobs:
       - name: 📦 安裝所需套件
         run: |
           pip install yfinance pytz
+          # 如果您的 py 檔有用到 requests 或 bs4，請取消下面這行的註解
+          # pip install requests beautifulsoup4
 
       - name: 🚀 執行抓價與網頁生成腳本
         run: python update_dashboard.py
@@ -33,6 +35,11 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action Bot"
           git add index.html
-          # 如果沒有變更就不 commit
-          git commit -m "自動更新: 最新收盤價" || exit 0
-          git push
+          
+          # 檢查是否有檔案變更，有變更才 commit，避免機器人報錯
+          if git diff --staged --quiet; then
+            echo "沒有任何股價更新，跳過 Commit"
+          else
+            git commit -m "自動更新: 最新收盤價與戰情室數據"
+            git push
+          fi

@@ -23,7 +23,7 @@ supply_chain = {
     ],
     "🥏 4. CMP 化學機械平坦化": [
         {"name": "中砂", "ticker": "1560.TW", "desc": "3nm/2nm CMP 鑽石碟主力供應商，隨製程微縮用量暴增。"},
-        {"name": "頌勝科技", "ticker": "7768.TWO", "desc": "半導體 CMP 研磨墊。本土供應鏈替代外商壟斷之關鍵。"} # 註：若為興櫃，yfinance 可能抓不到，但卡片仍可點擊
+        {"name": "頌勝科技", "ticker": "7768.TW", "desc": "半導體 CMP 研磨墊。本土供應鏈替代外商壟斷之關鍵。"} # 註：若為興櫃，yfinance 可能抓不到，但卡片仍可點擊
     ],
     "🏗️ 5. 先進封裝與廠務 (CoWoS & Facilities)": [
         {"name": "弘塑", "ticker": "3131.TWO", "desc": "濕製程設備 (酸槽、單晶圓清洗)，CoWoS 擴產最純受惠者。"},
@@ -37,6 +37,12 @@ supply_chain = {
         {"name": "倍利科", "ticker": "7822.TW", "desc": "高精度全自動光學顯微鏡、AOI 缺陷檢測。2nm 品質門神。"},
         {"name": "碩正科技", "ticker": "7669.TWO", "desc": "先進製程離型膜。高階製程中消耗量極大的精密耗材。"},
         {"name": "山太士", "ticker": "3595.TWO", "desc": "探針清洗片、翹曲膜。維持先進封裝良率的幕後功臣。"}
+    ],
+    "🧱 7. 玻璃基板與面板級封裝 (Glass Substrates / FOPLP)": [
+        {"name": "群創", "ticker": "3481.TW", "desc": "FOPLP 面板級封裝龍頭，以 700mm 方形載板技術切入 AI 供應鏈。"},
+        {"name": "欣興", "ticker": "3037.TW", "desc": "ABF 載板巨頭，正轉型開發玻璃載板與 TGV 技術，與 Intel/NV 深度合作。"},
+        {"name": "天虹", "ticker": "6937.TW", "desc": "提供 TGV 關鍵 PVD/ALD 設備，支援玻璃基板先進金屬化製程。"},
+        {"name": "台玻", "ticker": "1802.TW", "desc": "開發電子級低誘電 (Low Dk) 玻纖布，提供 AI 伺服器高速傳輸之基礎材料。"}
     ]
 }
 
